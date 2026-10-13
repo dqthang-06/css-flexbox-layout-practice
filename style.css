@@ -1,0 +1,182 @@
+/* Reset CSS và thiết lập chuẩn box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1e293b;
+    background-color: #f8fafc;
+    line-height: 1.6;
+}
+
+/* Khung chứa chính: Xếp dọc từ trên xuống */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* 1. Header */
+.header {
+    background-color: #1e293b;
+    color: #ffffff;
+    text-align: center;
+    padding: 24px 20px;
+}
+
+.header h1 {
+    font-size: 26px;
+    margin-bottom: 6px;
+}
+
+.header p {
+    font-size: 14px;
+    color: #94a3b8;
+}
+
+/* 2. Navigation */
+.nav {
+    background-color: #334155;
+    padding: 12px 20px;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #f8fafc;
+    font-weight: bold;
+    font-size: 15px;
+    transition: color 0.2s ease;
+}
+
+.nav a:hover {
+    color: #38bdf8;
+}
+
+/* 3. Main Container: Chứa Content và Sidebar */
+.main-container {
+    display: flex;
+    flex: 1; /* Tự động dãn để chiếm toàn bộ khoảng trống còn lại */
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+
+/* Content chiếm 3 phần */
+.content {
+    flex: 3;
+    padding: 30px 25px;
+}
+
+.content h2 {
+    color: #0f172a;
+    margin-bottom: 15px;
+}
+
+.content p {
+    margin-bottom: 15px;
+    color: #334155;
+}
+
+.card {
+    background-color: #f0fdf4;
+    border-left: 4px solid #16a34a;
+    padding: 15px 20px;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+.card h3 {
+    color: #15803d;
+    margin-bottom: 6px;
+}
+
+.card p {
+    color: #166534;
+    margin-bottom: 0;
+}
+
+/* Sidebar chiếm 1 phần */
+.sidebar {
+    flex: 1;
+    background-color: #f1f5f9;
+    padding: 30px 20px;
+    border-left: 1px solid #e2e8f0;
+}
+
+.sidebar h3 {
+    font-size: 18px;
+    color: #0f172a;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #0284c7;
+    padding-bottom: 6px;
+}
+
+.sidebar ul {
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+.sidebar ul li {
+    margin-bottom: 12px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #0284c7;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+}
+
+.ad-box {
+    background-color: #fed7aa;
+    color: #9a3412;
+    padding: 25px 15px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 6px;
+    border: 1px dashed #ea580c;
+    font-size: 14px;
+}
+
+/* 4. Footer */
+.footer {
+    background-color: #0f172a;
+    color: #94a3b8;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+/* 5. Responsive cho Mobile (Màn hình dưới 768px) */
+@media (max-width: 768px) {
+    .nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .main-container {
+        flex-direction: column; /* Chuyển Content và Sidebar xếp chồng theo chiều dọc */
+    }
+
+    .sidebar {
+        border-left: none;
+        border-top: 1px solid #e2e8f0;
+    }
+}
