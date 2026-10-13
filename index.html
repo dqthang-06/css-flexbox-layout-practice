@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Flexbox Layout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Khung chính quản lý bố cục bằng Flexbox dọc -->
+    <div class="container">
+        
+        <!-- 1. Header: Tiêu đề trang web -->
+        <header class="header">
+            <h1>Trang Web CSS Flexbox</h1>
+            <p>Bố cục hiện đại và tự động thích ứng với màn hình di động</p>
+        </header>
+
+        <!-- 2. Navigation: Thanh điều hướng -->
+        <nav class="nav">
+            <ul>
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Khóa học</a></li>
+                <li><a href="#">Dịch vụ</a></li>
+                <li><a href="#">Tin tức</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
+        </nav>
+
+        <!-- 3. Main Container: Chứa Content và Sidebar (Flexbox ngang trên Desktop) -->
+        <div class="main-container">
+            
+            <!-- Main Content: Chiếm 3 phần (flex: 3) -->
+            <main class="content">
+                <h2>Nội Dung Chính</h2>
+                <p>
+                    Flexbox (Flexible Box Layout Module) được thiết kế để phân phối không gian và sắp xếp các phần tử trong một khung chứa một cách tối ưu, ngay cả khi kích thước của chúng chưa được xác định trước.
+                </p>
+                <p>
+                    Bằng cách đặt <code>display: flex;</code> cho container và gán tỉ lệ <code>flex: 3;</code> cho khu vực nội dung chính và <code>flex: 1;</code> cho sidebar, chúng ta tạo ra được tỉ lệ cột 3:1 hoàn hảo mà không cần tính toán phần trăm chiều rộng thủ công.
+                </p>
+                <div class="card">
+                    <h3>Ưu điểm của Flexbox</h3>
+                    <p>Dễ dàng căn giữa, co giãn linh hoạt và thay đổi thứ tự phần tử bằng Media Queries.</p>
+                </div>
+            </main>
+
+            <!-- Sidebar: Chiếm 1 phần (flex: 1) -->
+            <aside class="sidebar">
+                <h3>Thanh Điều Hướng Phụ</h3>
+                <ul>
+                    <li><a href="#">Bài viết mới nhất</a></li>
+                    <li><a href="#">Tài liệu Front-end</a></li>
+                    <li><a href="#">Thủ thuật CSS</a></li>
+                </ul>
+                <div class="ad-box">
+                    Khu vực đặt banner quảng cáo
+                </div>
+            </aside>
+
+        </div>
+
+        <!-- 4. Footer: Chân trang -->
+        <footer class="footer">
+            <p>&copy; 2026 CodeGym. Bản quyền thuộc về tác giả.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
